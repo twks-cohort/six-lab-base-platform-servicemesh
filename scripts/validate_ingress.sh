@@ -7,6 +7,6 @@ export CLUSTER=$1
 bash scripts/deploy_httpbin.sh ${CLUSTER}
 sleep 30
 
-bats test/validate_twdps_io.bats
+bats test/validate_cdicohorts_digital.bats
 
-kubectl delete -f httpbin-twdps-io-gateway.yaml
+kubectl delete -f httpbin-cdicohorts-digital-gateway.yaml

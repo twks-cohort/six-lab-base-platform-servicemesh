@@ -50,7 +50,7 @@ spec:
     - "$domain"
     - "*.$domain"
     tls:
-      httpsRedirect: true 
+      httpsRedirect: true
   - port:
       number: 443
       name: https-$domain
@@ -59,7 +59,7 @@ spec:
     - "$domain"
     - "*.$domain"
     tls:
-      mode: SIMPLE 
+      mode: SIMPLE
       credentialName: "$domain-certificate"
 EOF
 kubectl apply -f $domain-gateway.yaml

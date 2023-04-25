@@ -2,7 +2,7 @@
 
 export CLUSTER=$1
 
-cat <<EOF > httpbin-twdps-io-gateway.yaml
+cat <<EOF > httpbin-cdicohorts-digital-gateway.yaml
 ---
 apiVersion: networking.istio.io/v1beta1
 kind: VirtualService
@@ -11,9 +11,9 @@ metadata:
   namespace: lab-system-mtls
 spec:
   hosts:
-  - "httpbin.$CLUSTER.twdps.io"
+  - "httpbin.$CLUSTER.cdicohorts.digital"
   gateways:
-  - istio-system/$CLUSTER-twdps-io-gateway
+  - istio-system/$CLUSTER-cdicohorts-digital-gateway
   http:
     - route:
       - destination:
@@ -69,4 +69,4 @@ spec:
         - containerPort: 80
 EOF
 
-kubectl apply -f httpbin-twdps-io-gateway.yaml
+kubectl apply -f httpbin-cdicohorts-digital-gateway.yaml
