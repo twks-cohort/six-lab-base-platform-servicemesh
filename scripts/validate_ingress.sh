@@ -1,10 +1,12 @@
 #!/usr/bin/env bash
 set -e
 
-export DOMAIN=$1
+export CLUSTER=$1
+export CLUSTER_DOMAINS=$(cat environments/$CLUSTER.install.json | jq -r .cluster_domains[0])
+declare -a domains=($(echo $CLUSTER_DOMAINS | jq -r '.[0]'))
 
 # deploy and test an nginx server on same account domain
-bash scripts/deploy_nginx.sh ${DOMAIN}
+bash scripts/deploy_nginx.sh ${domain}
 sleep 5
 
 bats test/validate_cdicohorts_digital.bats
