@@ -130,10 +130,9 @@ commands:
       - run:
           name: validate cert-manager deployment
           command: CLUSTER=<< parameters.cluster >> bats test/validate_cert_manager.bats
-# TODO: Enable once domain registered
-#      - run:
-#          name: validate default ingress and certificates
-#          command: bash scripts/validate_ingress.sh << parameters.cluster >>
+      - run:
+          name: validate default ingress and certificates
+          command: bash scripts/validate_ingress.sh << parameters.cluster >>
       - run:
           name: validate mesh tools
           command: CLUSTER=<< parameters.cluster >> bats test/validate_mesh_tools.bats
