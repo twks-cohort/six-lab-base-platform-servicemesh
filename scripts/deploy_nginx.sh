@@ -98,7 +98,7 @@ spec:
           name: nginx-configmap
       - name: domain-certificate
         secret:
-          secretName: $DOMAIN-certificate
+          secretName: ${DOMAIN}-certificate
 EOF
 
 kubectl apply -f nginx_server.yaml

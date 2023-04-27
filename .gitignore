@@ -13,3 +13,5 @@ credentials
 istio-1*
 *.auto.tfvars.json
 sandbox.json
+nginx_server.yaml
+nginx.conf
