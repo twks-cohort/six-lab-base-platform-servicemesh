@@ -52,7 +52,7 @@ spec:
   hosts:
   - nginx.${DOMAIN}
   gateways:
-  - istio-system/cdicohorts-digital-gateway
+  - istio-system/cdicohorts-six-com-gateway
   tls:
   - match:
     - port: 443

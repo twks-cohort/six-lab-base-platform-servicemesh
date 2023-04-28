@@ -7,8 +7,8 @@
 	<br />
 	<a href="https://aws.amazon.com"><img src="https://img.shields.io/badge/-deployed-blank.svg?style=social&logo=amazon"></a>
 	<br />
-  <h3>cohort-base-platform-servicemesh</h3>
-	<a href="https://app.circleci.com/pipelines/github/ThoughtWorks-DPS/cohort-base-platform-servicemesh"><img src="https://circleci.com/gh/ThoughtWorks-DPS/cohort-base-platform-servicemesh.svg?style=shield"></a> <a href="https://opensource.org/licenses/MIT"><img src="https://img.shields.io/badge/license-MIT-blue.svg"></a>
+  <h3>six-lab-base-platform-servicemesh</h3>
+	<a href="https://app.circleci.com/pipelines/github/twks-cohort/six-lab-base-platform-servicemesh"><img src="https://circleci.com/gh/twks-cohort/six-lab-base-platform-servicemesh.svg?style=shield"></a> <a href="https://opensource.org/licenses/MIT"><img src="https://img.shields.io/badge/license-MIT-blue.svg"></a>
 </div>
 <br />
 

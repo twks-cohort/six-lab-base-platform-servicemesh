@@ -8,9 +8,9 @@ terraform {
 
   backend "remote" {
     hostname     = "app.terraform.io"
-    organization = "twdps"
+    organization = "twks-cohort"
     workspaces {
-      prefix = "cohort-base-platform-servicemesh-"
+      prefix = "six-lab-base-platform-servicemesh-"
     }
   }
 }
@@ -19,6 +19,6 @@ provider "aws" {
   region = var.aws_region
   assume_role {
     role_arn     = "arn:aws:iam::${var.aws_account_id}:role/${var.aws_assume_role}"
-    session_name = "cohort-base-platform-servicemesh"
+    session_name = "six-lab-base-platform-servicemesh"
   }
 }
