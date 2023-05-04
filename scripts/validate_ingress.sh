@@ -9,7 +9,7 @@ declare -a domain=($(echo $CLUSTER_DOMAINS | jq -r '.[0]'))
 bash scripts/deploy_nginx.sh ${domain}
 sleep 5
 
-bats test/validate_cdicohorts_digital.bats
+CLUSTER=$CLUSTER bats test/validate_cdicohorts_digital.bats
 
 kubectl delete -f nginx_server.yaml
 kubectl delete configmap -n istio-system nginx-configmap
