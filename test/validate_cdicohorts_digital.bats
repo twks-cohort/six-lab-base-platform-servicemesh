@@ -1,11 +1,11 @@
 #!/usr/bin/env bats
 
 @test "evaluate cdicohorts-six.com ingress" {
-  run bash -c "curl https://httpbin.${CLUSTER}.cdicohorts-six.com/status/418"
-  [[ "${output}" =~ "-=[ teapot ]=-" ]]
+  run bash -c "curl https://nginx.${CLUSTER}.cdicohorts-six.com"
+  [[ "${output}" =~ "the nginx web server is successfully installed" ]]
 }
 
 @test "evaluate cdicohorts-six.com certificate" {
-  run bash -c "curl --cert-status -v https://httpbin.${CLUSTER}.cdicohorts-six.com/status/418"
+  run bash -c "curl --cert-status -v https://nginx.${CLUSTER}.cdicohorts-six.com"
   [[ "${output}" =~ "SSL certificate verify ok" ]]
 }
