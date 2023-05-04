@@ -6,7 +6,7 @@ export CLUSTER_DOMAINS=$(cat environments/$CLUSTER.install.json | jq -r .cluster
 declare -a domain=($(echo $CLUSTER_DOMAINS | jq -r '.[0]'))
 
 # deploy and test an nginx server on same account domain
-bash scripts/deploy_nginx.sh ${domain}
+bash scripts/deploy_nginx.sh ${domain} ${CLUSTER}
 sleep 5
 
 CLUSTER=$CLUSTER bats test/validate_cdicohorts_digital.bats

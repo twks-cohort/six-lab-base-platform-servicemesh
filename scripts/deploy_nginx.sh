@@ -1,6 +1,7 @@
 #!/usr/bin/env bash
 
 export DOMAIN=$1
+export CLUSTER=$2
 
 cat <<EOF > ./nginx.conf
 events {
@@ -52,7 +53,7 @@ spec:
   hosts:
   - nginx.${DOMAIN}
   gateways:
-  - istio-system/cdicohorts-six-com-gateway
+  - istio-system/${CLUSTER}-cdicohorts-six-com-gateway
   tls:
   - match:
     - port: 443
