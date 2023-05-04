@@ -5,7 +5,7 @@
   "kiali_version": "v1.67.0",
 
   "cluster_domains": [
-    "cdicohorts-six.com"
+    "nonprod-east-2.cdicohorts-six.com"
   ],
   "issuerEndpoint": "https://acme-v02.api.letsencrypt.org/directory",
   "issuerEmail": "twdps.io@gmail.com"

@@ -113,6 +113,9 @@ commands:
       - run:
           name: deploy kiali
           command: bash scripts/deploy_kiali.sh << parameters.cluster >>
+      - run: 
+          name: deploy httpbin
+          command: bash scripts/deploy_httpbin.sh << parameters.cluster >>
 
   validate-servicemesh-components:
     parameters:
@@ -136,7 +139,9 @@ commands:
       - run:
           name: validate mesh tools
           command: CLUSTER=<< parameters.cluster >> bats test/validate_mesh_tools.bats
-
+      - run: 
+          name: validate httpbin available through gateway
+          command: CLUSTER=<< parameters.cluster >> bats test/validate_httpbin.bats
 jobs:
   deploy-servicemesh:
     docker:
