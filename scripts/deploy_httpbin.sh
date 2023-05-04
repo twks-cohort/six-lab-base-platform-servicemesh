@@ -14,16 +14,13 @@ spec:
   - "httpbin.${CLUSTER}.cdicohorts-six.com"
   gateways:
   - istio-system/${CLUSTER}-cdicohorts-six-com-gateway
-  tls:
-  - match:
-    - port: 443
-    - sniHosts:
-      - "httpbin.${CLUSTER}.cdicohorts-six.com"
-    route:
-    - destination:
-        host: httpbin.lab-system-mtls.svc.cluster.local
-        port:
-          number: 443
+  http:
+    - route:
+      - destination:
+          host: httpbin.lab-system-mtls.svc.cluster.local
+          port:
+            number: 8000
+
 ---
 apiVersion: v1
 kind: Service
